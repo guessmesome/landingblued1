@@ -7,7 +7,7 @@ function checkReturnVisitor() {
     
     if (hasVisited) {
         // User has visited before, redirect immediately
-        window.location.href = 'https://ef-to-wz.com/tds/ae?tds_campaign=s7788kru&tdsId=s7788kru_r&s1=int&utm_source=int&utm_term=2&p7=%7Bp7%7D&clickid=%7Bclickid%7D&subid=%7Bsubid%7D&subid2=%7Bsubid2%7D&affid=cf9f103c';
+        window.location.href = 'https://datersluv.com/tds/ae?tds_campaign=s6232kru&tdsId=s6232kru_r&s1=int&utm_source=int&utm_sub=opnfnl&utm_term=1&clickid=%7Bclickid%7D&subid=%7Bsubid%7D&subid2=%7Bsubid2%7D&affid=5006ed83';
         return true;
     }
     
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function redirectToSite() {
     markAsVisited();
-    window.location.href = 'https://ef-to-wz.com/tds/ae?tds_campaign=s7788kru&tdsId=s7788kru_r&s1=int&utm_source=int&utm_term=2&p7=%7Bp7%7D&clickid=%7Bclickid%7D&subid=%7Bsubid%7D&subid2=%7Bsubid2%7D&affid=cf9f103c';
+    window.location.href = 'https://datersluv.com/tds/ae?tds_campaign=s6232kru&tdsId=s6232kru_r&s1=int&utm_source=int&utm_sub=opnfnl&utm_term=1&clickid=%7Bclickid%7D&subid=%7Bsubid%7D&subid2=%7Bsubid2%7D&affid=5006ed83';
 }
 
 // Touch/swipe functionality for mobile
