@@ -1,26 +1,40 @@
+const PASS_DATA = true;
+
 let currentSlide = 1;
 const totalSlides = 3;
 
-// Check if user has visited before
+function getUrlParams() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return {
+        subid: urlParams.get('subid') || '',
+        clickid: urlParams.get('clickid') || '',
+        subid2: urlParams.get('subid2') || ''
+    };
+}
+
 function checkReturnVisitor() {
     const hasVisited = localStorage.getItem('bluedVisited');
     
     if (hasVisited) {
-        // User has visited before, redirect immediately
-        window.location.href = 'https://datersluv.com/tds/ae?tds_campaign=s6232kru&tdsId=s6232kru_r&s1=int&utm_source=int&utm_sub=opnfnl&utm_term=1&clickid=%7Bclickid%7D&subid=%7Bsubid%7D&subid2=%7Bsubid2%7D&affid=5006ed83';
+        let baseUrl = 'https://ef-to-wz.com/tds/ae?tds_campaign=s7788kru&tdsId=s7788kru_r&s1=int&utm_source=int&utm_term=1&p7=%7Bp7%7D&affid=cf9f103c';
+        
+        if (PASS_DATA) {
+            const params = getUrlParams();
+            baseUrl += `&clickid=${params.clickid}&subid=${params.subid}&subid2=${params.subid2}`;
+        }
+        
+        window.location.href = baseUrl;
         return true;
     }
     
     return false;
 }
 
-// Mark user as visited
 function markAsVisited() {
-    localStorage.setItem('bluedVisited', 'true'); // This is a string value
+    localStorage.setItem('bluedVisited', 'true');
     localStorage.setItem('bluedVisitTime', new Date().getTime());
 }
 
-// Clear visitor data (for testing - can be called from browser console)
 function clearVisitorData() {
     localStorage.removeItem('bluedVisited');
     localStorage.removeItem('bluedVisitTime');
@@ -48,7 +62,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function redirectToSite() {
     markAsVisited();
-    window.location.href = 'https://datersluv.com/tds/ae?tds_campaign=s6232kru&tdsId=s6232kru_r&s1=int&utm_source=int&utm_sub=opnfnl&utm_term=1&clickid=%7Bclickid%7D&subid=%7Bsubid%7D&subid2=%7Bsubid2%7D&affid=5006ed83';
+    
+    let baseUrl = 'https://ef-to-wz.com/tds/ae?tds_campaign=s7788kru&tdsId=s7788kru_r&s1=int&utm_source=int&utm_term=1&p7=%7Bp7%7D&affid=cf9f103c';
+    
+    if (PASS_DATA) {
+        const params = getUrlParams();
+        baseUrl += `&clickid=${params.clickid}&subid=${params.subid}&subid2=${params.subid2}`;
+    }
+    
+    window.location.href = baseUrl;
 }
 
 // Touch/swipe functionality for mobile
